@@ -17,7 +17,7 @@ const server = express();
 const port = 7780;
 
 server.post("/engineering/message", upload.single('doc'), (request, response) => {
-  response.setHeader("Access-Control-Allow-Origin", ` https://kurilo-pavel.github.io/engineering/`);
+  response.setHeader("Access-Control-Allow-Origin", ` https://kurilo-pavel.github.io`);
 
   const transporter = nodemailer.createTransport(configNodeMailer);
   const message = {
